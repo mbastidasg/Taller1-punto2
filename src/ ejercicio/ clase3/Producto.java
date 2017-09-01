@@ -1,10 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package tiendita;
-
 /**
  *
  * @author Maicol Velasquez
@@ -22,7 +15,7 @@ public class Producto {
     
     
 
-    public Producto(String nombre, String tipo, int disponible,  double precio, int min, int PrecioF) {
+    public Producto(String nombre, String tipo, int disponible,  double precio, int min, double PrecioF) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.disponible = disponible;
@@ -87,28 +80,6 @@ public class Producto {
     
     
     
-    public double PrecioFijo ( double precio, String Tipo ){
-        double aux ;
-        for (int i= 0; i < 4; i++){
-        if(this.tipo.equals(Tipo)   ){
-             switch (tipo) {
-                case "Papeleria":
-                    aux = (precio * 16) / 100;
-                    this.PrecioF = precio + aux;
-                    break;
-                case "Supermercado":
-                    aux = (precio * 4) / 100;
-                    this.PrecioF = precio + aux;
-                    break;
-                default:
-                    aux = (precio * 12) / 100;
-                    this.PrecioF = precio + aux;
-                    break;
-            }
-            
-        }
-    }
-    return this.PrecioF;
-}
+   
     
 }
